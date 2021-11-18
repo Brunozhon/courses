@@ -22,7 +22,7 @@ title: Binary Assignment
     document.getElementById("elapsed").innerHTML = timeElapsed / 10
   }, 100)
   function toggleFullscreen() {
-    let elem = document.querySelector("video");
+    let elem = document.documentElement;
     if (!document.fullscreenElement) {
       elem.requestFullscreen().catch(err => {
         alert("Error attempting to enable full-screen mode: " + err.name + ": " + err.message));
