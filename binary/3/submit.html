@@ -1,0 +1,28 @@
+---
+layout: main
+title: Binary
+---
+<h1></h1>
+<script>
+  var number = new URLSearchParams(location.search)
+  var text = ""
+  var gotAnyCorrect = false
+  if (number.get("1stdigit") == 0) {
+    text += "You got the ones digit correct."
+    gotAnyCorrect = true
+  }
+  if (number.get("10thdigit") == 1) {
+    text += "You got the tens digit correct."
+    gotAnyCorrect = true
+  }
+  if (number.get("100thdigit") == 1) {
+    text += "You got the hundreds digit correct."
+    gotAnyCorrect = true
+  }
+  if (gotAnyCorrect) {
+    text += "Good job!"
+  } else {
+    text += "Sorry, but I think you need to <a href='./'>try again</a>."
+  }
+  document.querySelector("h1").innerHTML = text
+</script>
