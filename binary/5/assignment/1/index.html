@@ -2,6 +2,7 @@
 layout: main
 title: Binary Assignment
 ---
+<p><button onclick="toggleFullscreen()">Toggle Fullscreen</button></p>
 <p><span class="lead">We're going to have a review.</span> Here are some tips for doing well:</p>
 <ul>
   <li>Don't stress out.</li>
@@ -14,8 +15,18 @@ title: Binary Assignment
 </form>
 <script>
   var timeElapsed = 0
-  setInterval(() => {
+  setInterval(() => 
     timeElapsed += 1
     document.getElementById("elapsed").innerHTML = timeElapsed / 10
   }, 100)
+  function toggleFullscreen() {
+    let elem = document.querySelector("video");
+    if (!document.fullscreenElement) {
+      elem.requestFullscreen().catch(err => {
+        alert("Error attempting to enable full-screen mode: " + err.name + ": " + err.message));
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  }
 </script>
