@@ -1,0 +1,21 @@
+---
+layout: main
+title: Binary Assignment
+---
+<p><span class="lead">We're going to have a review.</span> Here are some tips for doing well:</p>
+<ul>
+  <li>Don't stress out.</li>
+  <li>Try your best.</li>
+  <li>Focus on your own work.</li>
+</ul>
+<p>Good luck!</p>
+<form>
+  <p>Time elapsed: <span id="elapsed"></span> seconds</p>
+</form>
+<script>
+  var timeElapsed = 0
+  setInterval(() => {
+    timeElapsed += 1
+    document.getElementById("elapsed").innerHTML = timeElapsed / 10
+  }, 100)
+</script>
