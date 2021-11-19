@@ -2,8 +2,6 @@
 layout: main
 title: Binary Assignment
 ---
-
-<p><button onclick="toggleFullscreen()">Toggle Fullscreen</button></p>
 <p><span class="lead">We're going to have a review.</span> Here are some tips for doing well:</p>
 <ul>
   <li>Don't stress out.</li>
@@ -14,6 +12,62 @@ title: Binary Assignment
 <form>
   <p>Time elapsed: <span id="elapsed"></span> seconds</p>
   <p><b>3-digit binary numbers</b> <span class="badge bg-info text-dark"><span class="visually-hidden">This is a</span> Challange</span></p>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <small><input></small>
+      </div>
+      <div class="col">
+        <small><input></small>
+      </div>
+      <div class="col">
+        <small><input></small>
+      </div>
+      <div class="col">
+        <small><input disabled value="0"></small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        1
+      </div>
+      <div class="col">
+        0
+      </div>
+      <div class="col">
+        1
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        +
+      </div>
+      <div class="col">
+        1
+      </div>
+      <div class="col">
+        1
+      </div>
+      <div class="col">
+        1
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <input name="q1_8s">
+      </div>
+      <div class="col">
+        <input name="q1_4s">
+      </div>
+      <div class="col">
+        <input name="q1_2s">
+      </div>
+      <div class="col">
+        <input name="q1_1s">
+      </div>
+    </div>
+  </div>
 </form>
 <script>
   var timeElapsed = 0
@@ -21,14 +75,4 @@ title: Binary Assignment
     timeElapsed += 1
     document.getElementById("elapsed").innerHTML = timeElapsed / 10
   }, 100)
-  function toggleFullscreen() {
-    let elem = document.documentElement;
-    if (!document.fullscreenElement) {
-      elem.requestFullscreen().catch(err => {
-        alert("Error attempting to enable full-screen mode: " + err.name + ": " + err.message));
-      });
-    } else {
-      document.exitFullscreen();
-    }
-  }
 </script>
