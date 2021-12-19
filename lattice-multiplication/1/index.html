@@ -32,4 +32,33 @@ title: Lattice Multiplication
 </ol>
 <p>See? 16 steps! Because 4 &times; 4 equals 16!</p>
 
+<p><b>Note for Programming Experts:</b> The psuedocode is shown below:</p>
+
+<pre>
+Define function called "Do Lattice Multiplication" with this code:
+  For each digit in the first number from right to left:
+    For each digit in the second number from right to left:
+      Multiply the first digit by the second digit.
+</pre>
+
+<p><b>Note for Swift experts:</b> The Swift version is this:</p>
+
+<pre>
+func latticeMultiplication(_ num1: Int, _ num2: Int) -> Int {
+  // Set digits
+  var digits1 = String(num1).map { Int($0)! }.reversed()
+  var digits2 = String(num2).map { Int($0)! }.reversed()
+  // Track result
+  var result = 0
+  var placeValue = 1
+  // Multiply
+  for digit1 in digits1 {
+    for digit2 in digits2 {
+      result += (digit1 + digit2) * placeValue
+    }
+  }
+  return result
+}
+</pre>
+
 <p><a href="../2/">Next</a></p>
