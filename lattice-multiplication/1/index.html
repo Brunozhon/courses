@@ -55,6 +55,7 @@ func latticeMultiplication(_ num1: Int, _ num2: Int) -> Int {
   for digit1 in digits1 {
     for digit2 in digits2 {
       result += (digit1 + digit2) * placeValue
+      placeValue *= 10
     }
   }
   return result
